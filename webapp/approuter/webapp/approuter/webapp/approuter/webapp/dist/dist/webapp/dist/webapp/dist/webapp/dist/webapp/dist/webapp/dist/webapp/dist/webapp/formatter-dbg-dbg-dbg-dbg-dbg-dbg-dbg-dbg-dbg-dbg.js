@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/format/DateFormat"],function(){"use strict";return{formatDate:function(t){debugger;if(!t){return""}var e=DateFormat.getDateInstance({pattern:"yyyy-MM-dd'T'HH:mm:ss"});return e.format(new Date(t))},JOBSTATFF:function(t){return t==="C"?"Success":"Error"},formatDate:function(t){if(t){var e=sap.ui.core.format.DateFormat.getDateTimeInstance({pattern:"dd-MM-yyyy"});return e.format(new Date(t))}return t}}});
+//# sourceMappingURL=formatter-dbg-dbg-dbg-dbg-dbg-dbg-dbg-dbg-dbg-dbg.js.map

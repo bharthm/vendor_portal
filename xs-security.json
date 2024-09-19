@@ -1,0 +1,47 @@
+{
+  "xsappname": "zsfl_scm_auth",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+"scopes": [
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "User scope"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin scope"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "User",
+      "description": "Basic user role",
+      "scope-references": [
+        "$XSAPPNAME.User"
+      ]
+    },
+    {
+      "name": "Admin",
+      "description": "Admin role",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "UserCollection",
+      "description": "Collection for regular users",
+      "role-template-references": [
+        "$XSAPPNAME.User"
+      ]
+    },
+    {
+      "name": "AdminCollection",
+      "description": "Collection for administrators",
+      "role-template-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ]  
+}
